@@ -1,3 +1,4 @@
+import PricingSection from "../components/pricing-section";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 text-slate-50">
@@ -185,65 +186,7 @@ export default function Home() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="border-b border-slate-800 bg-slate-950">
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="text-center text-2xl font-semibold sm:text-3xl">
-              Simple pricing for everyone
-            </h2>
-            <p className="mt-2 text-center text-sm text-slate-300 sm:text-base">
-              Start free and upgrade only when you need more.
-            </p>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {[
-                {
-                  plan: "Free",
-                  price: "₹0",
-                  features: ["2 boards", "100 tasks", "Basic reminders"],
-                  highlight: false,
-                },
-                {
-                  plan: "Pro",
-                  price: "₹299/mo",
-                  features: ["Unlimited boards", "Unlimited tasks", "Team collaboration"],
-                  highlight: true,
-                },
-                {
-                  plan: "Student",
-                  price: "₹99/mo",
-                  features: ["All Free features", "Study templates", "Priority reminders"],
-                  highlight: false,
-                },
-              ].map((p) => (
-                <div
-                  key={p.plan}
-                  className={`flex flex-col rounded-2xl border ${
-                    p.highlight ? "border-indigo-500 shadow-lg shadow-indigo-500/20" : "border-slate-800"
-                  } bg-slate-900/60 p-6`}
-                >
-                  <h3 className="text-lg font-semibold">{p.plan}</h3>
-                  <div className="mt-2 text-3xl font-bold">{p.price}</div>
-
-                  <ul className="mt-4 space-y-2 text-sm text-slate-300">
-                    {p.features.map((f) => (
-                      <li key={f}>• {f}</li>
-                    ))}
-                  </ul>
-
-                  <button
-                    className={`mt-6 rounded-full px-4 py-2 text-sm font-medium ${
-                      p.highlight
-                        ? "bg-indigo-500 text-white hover:bg-indigo-400"
-                        : "border border-slate-700 hover:bg-slate-900"
-                    }`}
-                  >
-                    Choose plan
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <PricingSection />
       </main>
 
       {/* Footer */}
