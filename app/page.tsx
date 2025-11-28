@@ -5,10 +5,23 @@ export default function Home() {
       {/* Navbar */}
       <header className="w-full border-b border-slate-800">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-400" />
-            <span className="text-lg font-semibold tracking-tight">TaskFlow</span>
+
+          
+          <div className="flex items-center">
+            <span className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-300 bg-clip-text text-transparent">
+              TaskFlow
+            </span>
           </div>
+
+
+
+
+
+
+
+
+
+
           <div className="hidden gap-6 text-sm text-slate-300 md:flex">
             <a href="#features" className="hover:text-white transition">Features</a>
             <a href="#testimonials" className="hover:text-white transition">Testimonials</a>
